@@ -1,1 +1,16 @@
-quero so ver o arquivo
+
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+    test:
+        name: Site Google
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Onde sera feito o teste
+              env:
+                SITE: www.google.com
+              run: |
+                echo $SITE
